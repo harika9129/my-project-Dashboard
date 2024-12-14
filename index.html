@@ -113,13 +113,14 @@
   <script>
     async function toggleDevice(deviceId) {
         try {
-            const response = await fetch('https://mlew-api-iot.onrender.com/toggle-device', {
+            const response = await fetch('https://majesticminds-api.onrender.com/toggle-device'), 
+            {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ device_id: deviceId })
-            });
+            };
 
             const data = await response.json();
 
